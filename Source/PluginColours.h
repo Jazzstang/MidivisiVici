@@ -1,0 +1,35 @@
+#pragma once
+
+namespace PluginColours
+{
+    // Accent principal (bleu)
+    inline const juce::Colour primary         = juce::Colour(0xFF0A84FF);
+    inline const juce::Colour onPrimary       = juce::Colours::white;
+
+    // Accent secondaire (violet)
+    inline const juce::Colour secondary       = juce::Colour(0xFF5E5CE6);
+    inline const juce::Colour onSecondary     = juce::Colours::white;
+
+    // Fond général
+    inline const juce::Colour background      = juce::Colour(0xFF1C1C1E);
+    inline const juce::Colour onBackground    = juce::Colour(0xE6FFFFFF); // ~90% opacity
+
+    // Surface (panneaux, cartes)
+    inline const juce::Colour surface         = juce::Colour(0xFF2C2C2E);
+    inline const juce::Colour onSurface       = juce::Colour(0xCCFFFFFF); // ~80%
+
+    // États sémantiques
+    inline const juce::Colour error           = juce::Colour(0xFFFF453A);
+    inline const juce::Colour onError         = juce::Colours::white;
+    inline const juce::Colour success         = juce::Colour(0xFF30D158);
+    inline const juce::Colour warning         = juce::Colour(0xFFFFD60A);
+    inline const juce::Colour info            = juce::Colour(0xFF64D2FF);
+
+    // États d'interaction
+    inline const juce::Colour hover           = juce::Colour(0xFF2A2A2C);
+    inline const juce::Colour pressed         = juce::Colour(0xFF3A3A3C);
+    inline const juce::Colour disabled        = juce::Colour(0xFF8E8E93);
+
+    // Dividers
+    inline const juce::Colour divider         = juce::Colour(0xFF3A3A3C);
+}
