@@ -4,6 +4,7 @@
 #include "DivisiOctaveDoubling.h"
 #include "DivisiDropVoicing.h"
 #include "DivisiRoundRobin.h"
+#include "FlatComboBoxParameterAttachment.h"
 
 DivisiBase::DivisiBase(juce::AudioProcessorValueTreeState& state)
     : parameters(state)
@@ -20,14 +21,14 @@ DivisiBase::DivisiBase(juce::AudioProcessorValueTreeState& state)
     modeSelector.addItem("Round Robin", 4);
     addAndMakeVisible(modeSelector);
 
-    modeAttachment = std::make_unique<juce::AudioProcessorValueTreeState::ComboBoxAttachment>(
-        parameters, ParamIDs::divisiMode, modeSelector);
-
     // === Callback changement mode ===
     modeSelector.onChange = [this]
     {
         changeMode(modeSelector.getSelectedId());
     };
+
+    modeAttachment = std::make_unique<FlatComboBoxParameterAttachment>(
+        *parameters.getParameter(ParamIDs::divisiMode), modeSelector);
 
     // Initialisation du composant actif
     changeMode(modeSelector.getSelectedId());
