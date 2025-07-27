@@ -1,0 +1,75 @@
+#include "DivisiBase.h"
+#include "PluginParameters.h"
+#include "DivisiSplit.h"
+#include "DivisiOctaveDoubling.h"
+#include "DivisiDropVoicing.h"
+#include "DivisiRoundRobin.h"
+
+DivisiBase::DivisiBase(juce::AudioProcessorValueTreeState& state)
+    : parameters(state)
+{
+    // === Header ===
+    addAndMakeVisible(headerButton);
+    enableAttachment = std::make_unique<juce::AudioProcessorValueTreeState::ButtonAttachment>(
+        parameters, juce::String(ParamIDs::divisiEnable), headerButton);
+
+    // === Mode Selector ===
+    modeSelector.addItem("Split", 1);
+    modeSelector.addItem("Octave Doubling", 2);
+    modeSelector.addItem("Drop Voicing", 3);
+    modeSelector.addItem("Round Robin", 4);
+    addAndMakeVisible(modeSelector);
+
+    modeAttachment = std::make_unique<juce::AudioProcessorValueTreeState::ComboBoxAttachment>(
+        parameters, juce::String(ParamIDs::divisiMode), modeSelector);
+
+    // === Callback changement mode ===
+    modeSelector.onChange = [this]
+    {
+        changeMode(modeSelector.getSelectedId());
+    };
+
+    // Initialisation du composant actif
+    changeMode(modeSelector.getSelectedId());
+}
+
+DivisiBase::~DivisiBase() = default;
+
+void DivisiBase::changeMode(int modeId)
+{
+    // Supprime le composant précédent proprement
+    activeModeComponent.reset();
+
+    // Crée un nouveau composant selon le mode choisi
+    switch (modeId)
+    {
+        case 1: activeModeComponent = std::make_unique<DivisiSplit>(parameters); break;
+        case 2: activeModeComponent = std::make_unique<DivisiOctaveDoubling>(parameters); break;
+        case 3: activeModeComponent = std::make_unique<DivisiDropVoicing>(parameters); break;
+        case 4: activeModeComponent = std::make_unique<DivisiRoundRobin>(parameters); break;
+        default: break; // Aucun composant si mode inconnu
+    }
+
+    // Ajoute le nouveau composant si présent
+    if (activeModeComponent)
+        addAndMakeVisible(*activeModeComponent);
+
+    resized(); // repositionnement automatique
+}
+
+void DivisiBase::resized()
+{
+    auto area = getLocalBounds();
+
+    // === Header ===
+    headerButton.setBounds(area.removeFromTop(24));
+    area.removeFromTop(4);
+
+    // === Mode Selector ===
+    modeSelector.setBounds(area.removeFromTop(24));
+    area.removeFromTop(8);
+
+    // === Zone dynamique ===
+    if (activeModeComponent)
+        activeModeComponent->setBounds(area);
+}

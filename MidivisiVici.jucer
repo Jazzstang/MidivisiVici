@@ -9,53 +9,139 @@
               pluginCode="MDVZ">
   <MAINGROUP id="bEqSUf" name="MidivisiVici">
     <GROUP id="{2FCCFC2D-1995-BFCA-0DBE-50EA9DADB88D}" name="Source">
+      <FILE id="k4vaq1" name="DivisiBase.cpp" compile="1" resource="0" file="Source/DivisiBase.cpp"/>
+      <FILE id="c8qi8q" name="DivisiBase.h" compile="0" resource="0" file="Source/DivisiBase.h"/>
+      <FILE id="v9sdy9" name="DivisiDropVoicing.cpp" compile="1" resource="0"
+            file="Source/DivisiDropVoicing.cpp"/>
+      <FILE id="Sh1nme" name="DivisiDropVoicing.h" compile="0" resource="0"
+            file="Source/DivisiDropVoicing.h"/>
+      <FILE id="iHJms5" name="DivisiOctaveDoubling.cpp" compile="1" resource="0"
+            file="Source/DivisiOctaveDoubling.cpp"/>
+      <FILE id="NMoNND" name="DivisiOctaveDoubling.h" compile="0" resource="0"
+            file="Source/DivisiOctaveDoubling.h"/>
+      <FILE id="y0cmD4" name="DivisiRoundRobin.cpp" compile="1" resource="0"
+            file="Source/DivisiRoundRobin.cpp"/>
+      <FILE id="du4vBS" name="DivisiRoundRobin.h" compile="0" resource="0"
+            file="Source/DivisiRoundRobin.h"/>
+      <FILE id="zgMaPj" name="DivisiSplit.cpp" compile="1" resource="0" file="Source/DivisiSplit.cpp"/>
+      <FILE id="ZQ7gE7" name="DivisiSplit.h" compile="0" resource="0" file="Source/DivisiSplit.h"/>
+      <FILE id="MHA7t0" name="FlatComboBox.cpp" compile="1" resource="0"
+            file="Source/FlatComboBox.cpp"/>
+      <FILE id="sY7xuI" name="FlatComboBox.h" compile="0" resource="0" file="Source/FlatComboBox.h"/>
+      <FILE id="jgCqI4" name="InputFilter.cpp" compile="1" resource="0" file="Source/InputFilter.cpp"/>
+      <FILE id="pgPJeP" name="InputFilter.h" compile="0" resource="0" file="Source/InputFilter.h"/>
+      <FILE id="w74Q3F" name="InputMonitor.cpp" compile="1" resource="0"
+            file="Source/InputMonitor.cpp"/>
+      <FILE id="iyKpex" name="InputMonitor.h" compile="0" resource="0" file="Source/InputMonitor.h"/>
+      <FILE id="Pc55Q6" name="Jost-Black.ttf" compile="0" resource="1" file="../../Downloads/Jost/static/Jost-Black.ttf"/>
+      <FILE id="Y3n02A" name="Jost-BlackItalic.ttf" compile="0" resource="1"
+            file="../../Downloads/Jost/static/Jost-BlackItalic.ttf"/>
+      <FILE id="sxPVK1" name="Jost-Bold.ttf" compile="0" resource="1" file="../../Downloads/Jost/static/Jost-Bold.ttf"/>
+      <FILE id="EGz2FQ" name="Jost-BoldItalic.ttf" compile="0" resource="1"
+            file="../../Downloads/Jost/static/Jost-BoldItalic.ttf"/>
+      <FILE id="cxyfWc" name="Jost-ExtraBold.ttf" compile="0" resource="1"
+            file="../../Downloads/Jost/static/Jost-ExtraBold.ttf"/>
+      <FILE id="sDwV7O" name="Jost-ExtraBoldItalic.ttf" compile="0" resource="1"
+            file="../../Downloads/Jost/static/Jost-ExtraBoldItalic.ttf"/>
+      <FILE id="Ln2cHu" name="Jost-ExtraLight.ttf" compile="0" resource="1"
+            file="../../Downloads/Jost/static/Jost-ExtraLight.ttf"/>
+      <FILE id="kyHrh3" name="Jost-ExtraLightItalic.ttf" compile="0" resource="1"
+            file="../../Downloads/Jost/static/Jost-ExtraLightItalic.ttf"/>
+      <FILE id="edkD0x" name="Jost-Italic.ttf" compile="0" resource="1" file="../../Downloads/Jost/static/Jost-Italic.ttf"/>
+      <FILE id="ZP7P3l" name="Jost-Light.ttf" compile="0" resource="1" file="../../Downloads/Jost/static/Jost-Light.ttf"/>
+      <FILE id="sEF0al" name="Jost-LightItalic.ttf" compile="0" resource="1"
+            file="../../Downloads/Jost/static/Jost-LightItalic.ttf"/>
+      <FILE id="JUlp6K" name="Jost-Medium.ttf" compile="0" resource="1" file="../../Downloads/Jost/static/Jost-Medium.ttf"/>
+      <FILE id="zo3J65" name="Jost-MediumItalic.ttf" compile="0" resource="1"
+            file="../../Downloads/Jost/static/Jost-MediumItalic.ttf"/>
+      <FILE id="Pbgo1P" name="Jost-Regular.ttf" compile="0" resource="1"
+            file="../../Downloads/Jost/static/Jost-Regular.ttf"/>
+      <FILE id="bTitba" name="Jost-SemiBold.ttf" compile="0" resource="1"
+            file="../../Downloads/Jost/static/Jost-SemiBold.ttf"/>
+      <FILE id="NWB6Dc" name="Jost-SemiBoldItalic.ttf" compile="0" resource="1"
+            file="../../Downloads/Jost/static/Jost-SemiBoldItalic.ttf"/>
+      <FILE id="A6jq8V" name="Jost-Thin.ttf" compile="0" resource="1" file="../../Downloads/Jost/static/Jost-Thin.ttf"/>
+      <FILE id="TP0Ro2" name="Jost-ThinItalic.ttf" compile="0" resource="1"
+            file="../../Downloads/Jost/static/Jost-ThinItalic.ttf"/>
+      <FILE id="fUH1pm" name="LabeledSlider.cpp" compile="1" resource="0"
+            file="Source/LabeledSlider.cpp"/>
+      <FILE id="Da9yuX" name="LabeledSlider.h" compile="0" resource="0" file="Source/LabeledSlider.h"/>
+      <FILE id="RMwWqF" name="MidiMonitor.h" compile="0" resource="0" file="Source/MidiMonitor.h"/>
+      <FILE id="lonMmk" name="OutputMonitor.cpp" compile="1" resource="0"
+            file="Source/OutputMonitor.cpp"/>
+      <FILE id="vLmdrS" name="OutputMonitor.h" compile="0" resource="0" file="Source/OutputMonitor.h"/>
       <FILE id="ZZArcg" name="PluginColours.h" compile="0" resource="0" file="Source/PluginColours.h"/>
+      <FILE id="uQVfwn" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="goY5Rp" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="SBYtps" name="PluginLookAndFeel.cpp" compile="1" resource="0"
+            file="Source/PluginLookAndFeel.cpp"/>
       <FILE id="OZVri3" name="PluginLookAndFeel.h" compile="0" resource="0"
             file="Source/PluginLookAndFeel.h"/>
+      <FILE id="NWk4KE" name="PluginParameters.h" compile="1" resource="0"
+            file="Source/PluginParameters.h"/>
       <FILE id="SIKhse" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="KN9HuQ" name="PluginProcessor.h" compile="0" resource="0"
             file="Source/PluginProcessor.h"/>
-      <FILE id="uQVfwn" name="PluginEditor.cpp" compile="1" resource="0"
-            file="Source/PluginEditor.cpp"/>
-      <FILE id="goY5Rp" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="BIarTd" name="TransformBase.cpp" compile="1" resource="0"
+            file="Source/TransformBase.cpp"/>
+      <FILE id="CY1cTK" name="TransformBase.h" compile="0" resource="0" file="Source/TransformBase.h"/>
+      <FILE id="MXp6AH" name="TransformOctaveRandomizer.cpp" compile="1"
+            resource="0" file="Source/TransformOctaveRandomizer.cpp"/>
+      <FILE id="rhv1o8" name="TransformOctaveRandomizer.h" compile="0" resource="0"
+            file="Source/TransformOctaveRandomizer.h"/>
+      <FILE id="mQ8bOh" name="TransformStrummer.cpp" compile="1" resource="0"
+            file="Source/TransformStrummer.cpp"/>
+      <FILE id="OvDiUY" name="TransformStrummer.h" compile="0" resource="0"
+            file="Source/TransformStrummer.h"/>
+      <FILE id="P35S0M" name="TransformTranspose.cpp" compile="1" resource="0"
+            file="Source/TransformTranspose.cpp"/>
+      <FILE id="yL1v0r" name="TransformTranspose.h" compile="0" resource="0"
+            file="Source/TransformTranspose.h"/>
+      <FILE id="M3SlZf" name="TransformVelocityFormer.h" compile="0" resource="0"
+            file="Source/TransformVelocityFormer.h"/>
+      <FILE id="soMbvV" name="TransformVelocityFromer.cpp" compile="1" resource="0"
+            file="Source/TransformVelocityFromer.cpp"/>
+      <FILE id="wpPDfb" name="TwoLineToggleButton.h" compile="0" resource="0"
+            file="Source/TwoLineToggleButton.h"/>
     </GROUP>
   </MAINGROUP>
   <MODULES>
-    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
-            useGlobalPath="0"/>
-    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="1"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
   </MODULES>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
   <EXPORTFORMATS>
     <XCODE_MAC targetFolder="Builds/MacOSX">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" targetName="NewProject"/>
-        <CONFIGURATION isDebug="0" name="Release" targetName="NewProject"/>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="MidivisiVici"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="MidivisiVici"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_audio_plugin_client" path="../../modules"/>
-        <MODULEPATH id="juce_audio_processors" path="../../modules"/>
-        <MODULEPATH id="juce_gui_extra" path="../../modules"/>
-        <MODULEPATH id="juce_gui_basics" path="../../modules"/>
-        <MODULEPATH id="juce_graphics" path="../../modules"/>
-        <MODULEPATH id="juce_events" path="../../modules"/>
-        <MODULEPATH id="juce_core" path="../../modules"/>
-        <MODULEPATH id="juce_data_structures" path="../../modules"/>
-        <MODULEPATH id="juce_audio_basics" path="../../modules"/>
-        <MODULEPATH id="juce_audio_devices" path="../../modules"/>
-        <MODULEPATH id="juce_audio_formats" path="../../modules"/>
-        <MODULEPATH id="juce_audio_utils" path="../../modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
   </EXPORTFORMATS>
