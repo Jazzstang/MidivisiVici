@@ -4,6 +4,7 @@
 #include "TransformOctaveRandomizer.h"
 #include "TransformVelocityFormer.h"
 #include "TransformStrummer.h"
+#include "FlatComboBoxParameterAttachment.h"
 
 TransformBase::TransformBase(juce::AudioProcessorValueTreeState& state)
     : parameters(state)
@@ -21,14 +22,14 @@ TransformBase::TransformBase(juce::AudioProcessorValueTreeState& state)
     modeSelector.addItem("Strummer", 5);
     addAndMakeVisible(modeSelector);
 
-    modeAttachment = std::make_unique<juce::AudioProcessorValueTreeState::ComboBoxAttachment>(
-        parameters, ParamIDs::transformMode, modeSelector);
-
     // === Callback changement mode ===
     modeSelector.onChange = [this]
     {
         changeMode(modeSelector.getSelectedId());
     };
+
+    modeAttachment = std::make_unique<FlatComboBoxParameterAttachment>(
+        *parameters.getParameter(ParamIDs::transformMode), modeSelector);
 
     // Initialisation du composant actif
     changeMode(modeSelector.getSelectedId());

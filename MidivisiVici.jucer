@@ -28,6 +28,8 @@
       <FILE id="MHA7t0" name="FlatComboBox.cpp" compile="1" resource="0"
             file="Source/FlatComboBox.cpp"/>
       <FILE id="sY7xuI" name="FlatComboBox.h" compile="0" resource="0" file="Source/FlatComboBox.h"/>
+      <FILE id="wX2fCB" name="FlatComboBoxParameterAttachment.cpp" compile="1" resource="0" file="Source/FlatComboBoxParameterAttachment.cpp"/>
+      <FILE id="uFsYxB" name="FlatComboBoxParameterAttachment.h" compile="0" resource="0" file="Source/FlatComboBoxParameterAttachment.h"/>
       <FILE id="jgCqI4" name="InputFilter.cpp" compile="1" resource="0" file="Source/InputFilter.cpp"/>
       <FILE id="pgPJeP" name="InputFilter.h" compile="0" resource="0" file="Source/InputFilter.h"/>
       <FILE id="w74Q3F" name="InputMonitor.cpp" compile="1" resource="0"

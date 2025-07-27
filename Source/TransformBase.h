@@ -2,6 +2,7 @@
 
 #include <JuceHeader.h>
 #include "FlatComboBox.h"
+#include "FlatComboBoxParameterAttachment.h"
 
 /**
  * Composant graphique pour la gestion du module Transform.
@@ -32,7 +33,7 @@ private:
 
     // === Attachments ===
     std::unique_ptr<juce::AudioProcessorValueTreeState::ButtonAttachment> enableAttachment;
-    std::unique_ptr<juce::AudioProcessorValueTreeState::ComboBoxAttachment> modeAttachment;
+    std::unique_ptr<FlatComboBoxParameterAttachment> modeAttachment;
 
     void changeMode(int modeId);
 
