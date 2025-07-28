@@ -10,6 +10,14 @@ class PluginLookAndFeel : public juce::LookAndFeel_V4,
                           private juce::Timer
 {
 public:
+    struct CornerRadii
+    {
+        bool topLeft = false;
+        bool topRight = false;
+        bool bottomLeft = false;
+        bool bottomRight = false;
+        float radius = 4.0f;
+    };
     /**
      * Default corner radius for macOS 26 style rounding.
      * Use getCornerRadius() in your drawing code for consistent rounding across the UI.
@@ -67,6 +75,14 @@ public:
                                 bool isMouseOverButton, bool isButtonDown,
                                 float fontSize = 24.0f);
 
+    /** Custom version with individually rounded corners */
+    void drawSquareToggleButton(juce::Graphics&, juce::ToggleButton&,
+                                bool isMouseOverButton, bool isButtonDown,
+                                const CornerRadii&, float fontSize = 24.0f);
+
+    /** Update Input Monitor states used for conditional rounding */
+    void setMonitorStates(bool notes, bool controls, bool clock, bool events);
+
     // === Sliders ===
     /** Uses getCornerRadius() for macOS-like rounding. */
     void drawLinearSlider(juce::Graphics&, int x, int y, int width, int height,
@@ -111,6 +127,13 @@ public:
                            bool italic = false);
 
 private:
+    CornerRadii getCornerRadiiForButton(const juce::String& buttonId) const;
+
+    bool notesState = false;
+    bool controlsState = false;
+    bool clockState = false;
+    bool eventsState = false;
+
     // Polices Jost
     juce::Typeface::Ptr jostThin, jostThinItalic;
     juce::Typeface::Ptr jostExtraLight, jostExtraLightItalic;

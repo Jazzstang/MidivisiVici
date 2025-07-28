@@ -13,24 +13,28 @@ InputMonitor::InputMonitor(juce::AudioProcessorValueTreeState& vts)
     // --- Filtres ---
     notesButton.setButtonText("Notes");
     notesButton.setName("monitorFooter");
+    notesButton.setComponentID("IM_Notes");
     addAndMakeVisible(notesButton);
     notesAttachment = std::make_unique<juce::AudioProcessorValueTreeState::ButtonAttachment>(
         parameters, ParamIDs::inputMonitorFilterNote, notesButton);
 
     controlsButton.setButtonText("Controls");
     controlsButton.setName("monitorFooter");
+    controlsButton.setComponentID("IM_Controls");
     addAndMakeVisible(controlsButton);
     controlsAttachment = std::make_unique<juce::AudioProcessorValueTreeState::ButtonAttachment>(
         parameters, ParamIDs::inputMonitorFilterControl, controlsButton);
 
     clockButton.setButtonText("Clock");
     clockButton.setName("monitorFooter");
+    clockButton.setComponentID("IM_Clock");
     addAndMakeVisible(clockButton);
     clockAttachment = std::make_unique<juce::AudioProcessorValueTreeState::ButtonAttachment>(
         parameters, ParamIDs::inputMonitorFilterClock, clockButton);
 
     eventButton.setButtonText("Event");
     eventButton.setName("monitorFooter");
+    eventButton.setComponentID("IM_Events");
     addAndMakeVisible(eventButton);
     eventAttachment = std::make_unique<juce::AudioProcessorValueTreeState::ButtonAttachment>(
         parameters, ParamIDs::inputMonitorFilterEvent, eventButton);

@@ -36,6 +36,11 @@ private:
     // === LookAndFeel local ===
     PluginLookAndFeel lookAndFeel;
 
+    bool notesState = false;
+    bool controlsState = false;
+    bool clockState = false;
+    bool eventsState = false;
+
     juce::Image noiseImage;
     int noiseWidth = 0;
     int noiseHeight = 0;
