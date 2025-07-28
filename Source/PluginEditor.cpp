@@ -79,6 +79,13 @@ void MidivisiViciAudioProcessorEditor::timerCallback()
     inputMonitor.updateFromFifo(processor.inputFifo, processor.inputFifoMessages);
     outputMonitor.updateFromFifo(processor.outputFifo, processor.outputFifoMessages);
 
+    notesState = processor.parameters.getRawParameterValue(ParamIDs::inputMonitorFilterNote)->load() > 0.5f;
+    controlsState = processor.parameters.getRawParameterValue(ParamIDs::inputMonitorFilterControl)->load() > 0.5f;
+    clockState = processor.parameters.getRawParameterValue(ParamIDs::inputMonitorFilterClock)->load() > 0.5f;
+    eventsState = processor.parameters.getRawParameterValue(ParamIDs::inputMonitorFilterEvent)->load() > 0.5f;
+
+    lookAndFeel.setMonitorStates(notesState, controlsState, clockState, eventsState);
+
     repaint();
 }
 

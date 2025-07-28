@@ -42,6 +42,52 @@ PluginLookAndFeel::~PluginLookAndFeel()
     stopTimer();
 }
 
+PluginLookAndFeel::CornerRadii PluginLookAndFeel::getCornerRadiiForButton(const juce::String& buttonId) const
+{
+    CornerRadii c;
+    c.radius = 4.0f;
+
+    if (buttonId == "Notes")
+    {
+        c.topLeft = c.bottomLeft = true;
+        if (notesState != controlsState)
+            c.topRight = c.bottomRight = notesState;
+    }
+    else if (buttonId == "Controls")
+    {
+        if (notesState != controlsState)
+            c.topLeft = c.bottomLeft = controlsState;
+        if (controlsState != clockState)
+            c.topRight = c.bottomRight = controlsState;
+    }
+    else if (buttonId == "Clock")
+    {
+        if (controlsState != clockState)
+            c.topLeft = c.bottomLeft = clockState;
+        if (clockState != eventsState)
+            c.topRight = c.bottomRight = clockState;
+    }
+    else if (buttonId == "Event" || buttonId == "Events")
+    {
+        c.topRight = c.bottomRight = true;
+    }
+    else
+    {
+        c.topLeft = c.topRight = c.bottomLeft = c.bottomRight = true;
+    }
+
+    return c;
+}
+
+void PluginLookAndFeel::setMonitorStates(bool notes, bool controls,
+                                         bool clock, bool events)
+{
+    notesState = notes;
+    controlsState = controls;
+    clockState = clock;
+    eventsState = events;
+}
+
 // ======================
 // getJostFont centralisé
 // ======================
@@ -177,7 +223,15 @@ void PluginLookAndFeel::drawToggleButton(juce::Graphics& g, juce::ToggleButton& 
     else if (name == "monitorFooter") // <-- Détection de tes boutons en bas
     {
         // Utilise la version carrée mais avec une police plus petite
-        drawSquareToggleButton(g, button, isMouseOverButton, isButtonDown, 16.0f);
+        if (button.getComponentID().startsWith("IM_"))
+        {
+            auto radii = getCornerRadiiForButton(button.getButtonText());
+            drawSquareToggleButton(g, button, isMouseOverButton, isButtonDown, radii, 16.0f);
+        }
+        else
+        {
+            drawSquareToggleButton(g, button, isMouseOverButton, isButtonDown, 16.0f);
+        }
     }
     else
     {
@@ -257,24 +311,35 @@ void PluginLookAndFeel::drawSquareToggleButton(juce::Graphics& g, juce::ToggleBu
                                                bool isMouseOver, bool isButtonDown,
                                                float fontSize /* = 24.0f */)
 {
+    CornerRadii c;
+    c.radius = getCornerRadius();
+    c.topLeft     = !button.isConnectedOnLeft() && !button.isConnectedOnTop();
+    c.topRight    = !button.isConnectedOnRight() && !button.isConnectedOnTop();
+    c.bottomLeft  = !button.isConnectedOnLeft() && !button.isConnectedOnBottom();
+    c.bottomRight = !button.isConnectedOnRight() && !button.isConnectedOnBottom();
+
+    drawSquareToggleButton(g, button, isMouseOver, isButtonDown, c, fontSize);
+}
+
+void PluginLookAndFeel::drawSquareToggleButton(juce::Graphics& g, juce::ToggleButton& button,
+                                               bool isMouseOver, bool isButtonDown,
+                                               const CornerRadii& corners,
+                                               float fontSize)
+{
     auto bounds = button.getLocalBounds().toFloat();
 
     auto window = button.getTopLevelComponent();
     auto totalHeight = window ? window->getHeight() : 1;
     auto globalY = button.getScreenBounds().getCentreY();
 
-    const float cornerRadius = getCornerRadius();
-
-    // Determine which corners to round based on adjacency to other buttons
-    const bool roundTopLeft     = !button.isConnectedOnLeft() && !button.isConnectedOnTop();
-    const bool roundTopRight    = !button.isConnectedOnRight() && !button.isConnectedOnTop();
-    const bool roundBottomLeft  = !button.isConnectedOnLeft() && !button.isConnectedOnBottom();
-    const bool roundBottomRight = !button.isConnectedOnRight() && !button.isConnectedOnBottom();
+    const float r = corners.radius;
 
     // === Ombre portée (tous états) ===
     {
         juce::Path shadowPath;
-        shadowPath.addRoundedRectangle(bounds.translated(0, 1.5f), cornerRadius);
+        shadowPath.addRoundedRectangle(bounds.translated(0, 1.5f), r, r,
+                                       corners.topLeft, corners.topRight,
+                                       corners.bottomLeft, corners.bottomRight);
         g.setColour(juce::Colours::black.withAlpha(0.25f));
         g.fillPath(shadowPath);
     }
@@ -288,7 +353,9 @@ void PluginLookAndFeel::drawSquareToggleButton(juce::Graphics& g, juce::ToggleBu
 
     {
         juce::Path fillPath;
-        fillPath.addRoundedRectangle(bounds, cornerRadius);
+        fillPath.addRoundedRectangle(bounds, r, r,
+                                     corners.topLeft, corners.topRight,
+                                     corners.bottomLeft, corners.bottomRight);
         g.setColour(fill);
         g.fillPath(fillPath);
     }
@@ -301,7 +368,9 @@ void PluginLookAndFeel::drawSquareToggleButton(juce::Graphics& g, juce::ToggleBu
                                          juce::Colours::transparentBlack,
                                          bounds.getCentreX(), bounds.getBottom(), false);
         juce::Path shadowPath;
-        shadowPath.addRoundedRectangle(bounds, cornerRadius);
+        shadowPath.addRoundedRectangle(bounds, r, r,
+                                       corners.topLeft, corners.topRight,
+                                       corners.bottomLeft, corners.bottomRight);
         g.setGradientFill(innerShadow);
         g.fillPath(shadowPath);
     }
@@ -317,7 +386,9 @@ void PluginLookAndFeel::drawSquareToggleButton(juce::Graphics& g, juce::ToggleBu
             bounds.getCentreX(), bounds.getY() + glowHeight,
             false);
         juce::Path glowPath;
-        glowPath.addRoundedRectangle(bounds, cornerRadius);
+        glowPath.addRoundedRectangle(bounds, r, r,
+                                     corners.topLeft, corners.topRight,
+                                     corners.bottomLeft, corners.bottomRight);
         g.setGradientFill(innerGlow);
         g.fillPath(glowPath);
     }
