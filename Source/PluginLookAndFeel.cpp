@@ -252,6 +252,7 @@ void PluginLookAndFeel::drawRoundedToggleButton(juce::Graphics& g, juce::ToggleB
 // ======================
 // Bouton carré
 // ======================
+// Conditional rounding on corners based on connection state of adjacent buttons
 void PluginLookAndFeel::drawSquareToggleButton(juce::Graphics& g, juce::ToggleButton& button,
                                                bool isMouseOver, bool isButtonDown,
                                                float fontSize /* = 24.0f */)
@@ -262,9 +263,21 @@ void PluginLookAndFeel::drawSquareToggleButton(juce::Graphics& g, juce::ToggleBu
     auto totalHeight = window ? window->getHeight() : 1;
     auto globalY = button.getScreenBounds().getCentreY();
 
+    const float cornerRadius = getCornerRadius();
+
+    // Determine which corners to round based on adjacency to other buttons
+    const bool roundTopLeft     = !button.isConnectedOnLeft() && !button.isConnectedOnTop();
+    const bool roundTopRight    = !button.isConnectedOnRight() && !button.isConnectedOnTop();
+    const bool roundBottomLeft  = !button.isConnectedOnLeft() && !button.isConnectedOnBottom();
+    const bool roundBottomRight = !button.isConnectedOnRight() && !button.isConnectedOnBottom();
+
     // === Ombre portée (tous états) ===
-    g.setColour(juce::Colours::black.withAlpha(0.25f));
-    g.fillRect(bounds.translated(0, 1.5f));
+    {
+        juce::Path shadowPath;
+        shadowPath.addRoundedRectangle(bounds.translated(0, 1.5f), cornerRadius);
+        g.setColour(juce::Colours::black.withAlpha(0.25f));
+        g.fillPath(shadowPath);
+    }
 
     // === Volume de base ===
     juce::Colour fill = button.getToggleState()
@@ -272,8 +285,13 @@ void PluginLookAndFeel::drawSquareToggleButton(juce::Graphics& g, juce::ToggleBu
                         : isButtonDown  ? PluginColours::pressed
                         : isMouseOver   ? PluginColours::hover
                                         : PluginColours::surface;
-    g.setColour(fill);
-    g.fillRect(bounds);
+
+    {
+        juce::Path fillPath;
+        fillPath.addRoundedRectangle(bounds, cornerRadius);
+        g.setColour(fill);
+        g.fillPath(fillPath);
+    }
 
     // === Ombre interne haute (désactivé) ===
     if (!button.getToggleState())
@@ -282,8 +300,10 @@ void PluginLookAndFeel::drawSquareToggleButton(juce::Graphics& g, juce::ToggleBu
                                          bounds.getCentreX(), bounds.getY(),
                                          juce::Colours::transparentBlack,
                                          bounds.getCentreX(), bounds.getBottom(), false);
+        juce::Path shadowPath;
+        shadowPath.addRoundedRectangle(bounds, cornerRadius);
         g.setGradientFill(innerShadow);
-        g.fillRect(bounds);
+        g.fillPath(shadowPath);
     }
 
     // === Lueur interne haute (actif) ===
@@ -296,8 +316,10 @@ void PluginLookAndFeel::drawSquareToggleButton(juce::Graphics& g, juce::ToggleBu
             juce::Colours::transparentBlack,
             bounds.getCentreX(), bounds.getY() + glowHeight,
             false);
+        juce::Path glowPath;
+        glowPath.addRoundedRectangle(bounds, cornerRadius);
         g.setGradientFill(innerGlow);
-        g.fillRect(bounds);
+        g.fillPath(glowPath);
     }
 
     // === Contour sur hover (haut/bas uniquement) ===
@@ -670,3 +692,4 @@ juce::Font PluginLookAndFeel::getLabelFont(juce::Label& label)
     auto weight = isBold ? JostWeight::Bold : JostWeight::Regular;
     return getJostFont(13.0f, weight, isItalic);
 }
+
