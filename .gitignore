@@ -1,0 +1,70 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+# Symbolic links
+Icon
+._*
+
+# Thumbnails
+Thumbs.db
+ehthumbs.db
+
+# Files that might appear in the root of volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Build artefacts (Xcode / JUCE)
+Builds/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# Xcode per-user settings
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# Compiler intermediate files
+*.o
+*.obj
+*.pch
+*.d
+*.idb
+*.pdb
+
+# Libraries and binary artefacts
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.app
+*.dSYM/
+
+# JUCE specific user settings
+JuceLibraryCode/AppConfig.h
+JuceLibraryCode/JuceHeader.h
+
+# Logs and caches
+*.log
+*.cache
+*.temp
+*.tmp
+
+# Python / scripts (si jamais utilisés)
+__pycache__/
+*.pyc
+
+# IDE settings (facultatif, mais conseillé)
+.vscode/
+.idea/
+
+# Local tools & outputs
+*.user
+*.swp
