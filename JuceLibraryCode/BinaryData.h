@@ -8,6 +8,45 @@
 
 namespace BinaryData
 {
+    extern const char*   triangle_svg;
+    const int            triangle_svgSize = 542;
+
+    extern const char*   square_svg;
+    const int            square_svgSize = 564;
+
+    extern const char*   sine_svg;
+    const int            sine_svgSize = 589;
+
+    extern const char*   saw_svg;
+    const int            saw_svgSize = 542;
+
+    extern const char*   rnd_svg;
+    const int            rnd_svgSize = 1184;
+
+    extern const char*   copy_svg;
+    const int            copy_svgSize = 1019;
+
+    extern const char*   delete_svg;
+    const int            delete_svgSize = 2444;
+
+    extern const char*   paste_svg;
+    const int            paste_svgSize = 2004;
+
+    extern const char*   save_svg;
+    const int            save_svgSize = 968;
+
+    extern const char*   link_svg;
+    const int            link_svgSize = 1168;
+
+    extern const char*   mdvz_svg;
+    const int            mdvz_svgSize = 6597;
+
+    extern const char*   unlink_svg;
+    const int            unlink_svgSize = 1175;
+
+    extern const char*   NotoMusic_ttf;
+    const int            NotoMusic_ttfSize = 179916;
+
     extern const char*   JostBlack_ttf;
     const int            JostBlack_ttfSize = 61692;
 
@@ -63,7 +102,7 @@ namespace BinaryData
     const int            JostThinItalic_ttfSize = 65724;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 18;
+    const int namedResourceListSize = 31;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];
