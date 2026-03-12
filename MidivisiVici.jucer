@@ -3,75 +3,172 @@
 <JUCERPROJECT id="LlzHOA" name="MidivisiVici" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" version="0.0.1"
               pluginCharacteristicsValue="pluginIsMidiEffectPlugin,pluginProducesMidiOut,pluginWantsMidiIn"
-              pluginVST3Category="Fx,Tools" pluginAUMainType="'aumi'" pluginFormats="buildAU,buildAUv3,buildVST3"
-              pluginVSTCategory="kPlugCategEffect" pluginName="MidivisiVici"
-              pluginManufacturer="NVTHVN BLVK" pluginManufacturerCode="BLVK"
-              pluginCode="MDVZ">
+              pluginVST3Category="Fx,Tools" pluginAUMainType="'aumi'" pluginVSTCategory="kPlugCategEffect"
+              pluginName="MidivisiVici" pluginManufacturer="NVTHVN BLVK" pluginManufacturerCode="BLVK"
+              pluginCode="MDVZ" pluginFormats="buildAU,buildVST3">
   <MAINGROUP id="bEqSUf" name="MidivisiVici">
     <GROUP id="{2FCCFC2D-1995-BFCA-0DBE-50EA9DADB88D}" name="Source">
-      <FILE id="k4vaq1" name="DivisiBase.cpp" compile="1" resource="0" file="Source/DivisiBase.cpp"/>
-      <FILE id="c8qi8q" name="DivisiBase.h" compile="0" resource="0" file="Source/DivisiBase.h"/>
-      <FILE id="v9sdy9" name="DivisiDropVoicing.cpp" compile="1" resource="0"
-            file="Source/DivisiDropVoicing.cpp"/>
-      <FILE id="Sh1nme" name="DivisiDropVoicing.h" compile="0" resource="0"
-            file="Source/DivisiDropVoicing.h"/>
-      <FILE id="iHJms5" name="DivisiOctaveDoubling.cpp" compile="1" resource="0"
-            file="Source/DivisiOctaveDoubling.cpp"/>
-      <FILE id="NMoNND" name="DivisiOctaveDoubling.h" compile="0" resource="0"
-            file="Source/DivisiOctaveDoubling.h"/>
-      <FILE id="y0cmD4" name="DivisiRoundRobin.cpp" compile="1" resource="0"
-            file="Source/DivisiRoundRobin.cpp"/>
-      <FILE id="du4vBS" name="DivisiRoundRobin.h" compile="0" resource="0"
-            file="Source/DivisiRoundRobin.h"/>
-      <FILE id="zgMaPj" name="DivisiSplit.cpp" compile="1" resource="0" file="Source/DivisiSplit.cpp"/>
-      <FILE id="ZQ7gE7" name="DivisiSplit.h" compile="0" resource="0" file="Source/DivisiSplit.h"/>
-      <FILE id="MHA7t0" name="FlatComboBox.cpp" compile="1" resource="0"
-            file="Source/FlatComboBox.cpp"/>
-      <FILE id="sY7xuI" name="FlatComboBox.h" compile="0" resource="0" file="Source/FlatComboBox.h"/>
-      <FILE id="wX2fCB" name="FlatComboBoxParameterAttachment.cpp" compile="1" resource="0" file="Source/FlatComboBoxParameterAttachment.cpp"/>
-      <FILE id="uFsYxB" name="FlatComboBoxParameterAttachment.h" compile="0" resource="0" file="Source/FlatComboBoxParameterAttachment.h"/>
-      <FILE id="jgCqI4" name="InputFilter.cpp" compile="1" resource="0" file="Source/InputFilter.cpp"/>
-      <FILE id="pgPJeP" name="InputFilter.h" compile="0" resource="0" file="Source/InputFilter.h"/>
-      <FILE id="w74Q3F" name="InputMonitor.cpp" compile="1" resource="0"
-            file="Source/InputMonitor.cpp"/>
-      <FILE id="iyKpex" name="InputMonitor.h" compile="0" resource="0" file="Source/InputMonitor.h"/>
-      <FILE id="Pc55Q6" name="Jost-Black.ttf" compile="0" resource="1" file="../../Downloads/Jost/static/Jost-Black.ttf"/>
-      <FILE id="Y3n02A" name="Jost-BlackItalic.ttf" compile="0" resource="1"
-            file="../../Downloads/Jost/static/Jost-BlackItalic.ttf"/>
-      <FILE id="sxPVK1" name="Jost-Bold.ttf" compile="0" resource="1" file="../../Downloads/Jost/static/Jost-Bold.ttf"/>
-      <FILE id="EGz2FQ" name="Jost-BoldItalic.ttf" compile="0" resource="1"
-            file="../../Downloads/Jost/static/Jost-BoldItalic.ttf"/>
-      <FILE id="cxyfWc" name="Jost-ExtraBold.ttf" compile="0" resource="1"
-            file="../../Downloads/Jost/static/Jost-ExtraBold.ttf"/>
-      <FILE id="sDwV7O" name="Jost-ExtraBoldItalic.ttf" compile="0" resource="1"
-            file="../../Downloads/Jost/static/Jost-ExtraBoldItalic.ttf"/>
-      <FILE id="Ln2cHu" name="Jost-ExtraLight.ttf" compile="0" resource="1"
-            file="../../Downloads/Jost/static/Jost-ExtraLight.ttf"/>
-      <FILE id="kyHrh3" name="Jost-ExtraLightItalic.ttf" compile="0" resource="1"
-            file="../../Downloads/Jost/static/Jost-ExtraLightItalic.ttf"/>
-      <FILE id="edkD0x" name="Jost-Italic.ttf" compile="0" resource="1" file="../../Downloads/Jost/static/Jost-Italic.ttf"/>
-      <FILE id="ZP7P3l" name="Jost-Light.ttf" compile="0" resource="1" file="../../Downloads/Jost/static/Jost-Light.ttf"/>
-      <FILE id="sEF0al" name="Jost-LightItalic.ttf" compile="0" resource="1"
-            file="../../Downloads/Jost/static/Jost-LightItalic.ttf"/>
-      <FILE id="JUlp6K" name="Jost-Medium.ttf" compile="0" resource="1" file="../../Downloads/Jost/static/Jost-Medium.ttf"/>
-      <FILE id="zo3J65" name="Jost-MediumItalic.ttf" compile="0" resource="1"
-            file="../../Downloads/Jost/static/Jost-MediumItalic.ttf"/>
-      <FILE id="Pbgo1P" name="Jost-Regular.ttf" compile="0" resource="1"
-            file="../../Downloads/Jost/static/Jost-Regular.ttf"/>
-      <FILE id="bTitba" name="Jost-SemiBold.ttf" compile="0" resource="1"
-            file="../../Downloads/Jost/static/Jost-SemiBold.ttf"/>
-      <FILE id="NWB6Dc" name="Jost-SemiBoldItalic.ttf" compile="0" resource="1"
-            file="../../Downloads/Jost/static/Jost-SemiBoldItalic.ttf"/>
-      <FILE id="A6jq8V" name="Jost-Thin.ttf" compile="0" resource="1" file="../../Downloads/Jost/static/Jost-Thin.ttf"/>
-      <FILE id="TP0Ro2" name="Jost-ThinItalic.ttf" compile="0" resource="1"
-            file="../../Downloads/Jost/static/Jost-ThinItalic.ttf"/>
-      <FILE id="fUH1pm" name="LabeledSlider.cpp" compile="1" resource="0"
-            file="Source/LabeledSlider.cpp"/>
-      <FILE id="Da9yuX" name="LabeledSlider.h" compile="0" resource="0" file="Source/LabeledSlider.h"/>
-      <FILE id="RMwWqF" name="MidiMonitor.h" compile="0" resource="0" file="Source/MidiMonitor.h"/>
-      <FILE id="lonMmk" name="OutputMonitor.cpp" compile="1" resource="0"
-            file="Source/OutputMonitor.cpp"/>
-      <FILE id="vLmdrS" name="OutputMonitor.h" compile="0" resource="0" file="Source/OutputMonitor.h"/>
+      <GROUP id="{FA66DBFE-4100-5126-7382-20EA7F74D79B}" name="0-component">
+        <FILE id="S2xb7f" name="CustomRotaryNoCombo.cpp" compile="1" resource="0"
+              file="Source/0-component/CustomRotaryNoCombo.cpp"/>
+        <FILE id="P0828e" name="CustomRotaryNoCombo.h" compile="0" resource="0"
+              file="Source/0-component/CustomRotaryNoCombo.h"/>
+        <FILE id="Cv3szK" name="CustomRotaryWithCombo.cpp" compile="1" resource="0"
+              file="Source/0-component/CustomRotaryWithCombo.cpp"/>
+        <FILE id="RKLriB" name="CustomRotaryWithCombo.h" compile="0" resource="0"
+              file="Source/0-component/CustomRotaryWithCombo.h"/>
+        <FILE id="SXjBhi" name="FlatComboBox.cpp" compile="1" resource="0"
+              file="Source/0-component/FlatComboBox.cpp"/>
+        <FILE id="Pkt6JW" name="FlatComboBox.h" compile="0" resource="0" file="Source/0-component/FlatComboBox.h"/>
+        <FILE id="TueqPh" name="FlatComboBoxParameterAttachment.cpp" compile="1"
+              resource="0" file="Source/0-component/FlatComboBoxParameterAttachment.cpp"/>
+        <FILE id="u6PGW6" name="FlatComboBoxParameterAttachment.h" compile="0"
+              resource="0" file="Source/0-component/FlatComboBoxParameterAttachment.h"/>
+        <FILE id="OQV5dn" name="LabeledSlider.cpp" compile="1" resource="0"
+              file="Source/0-component/LabeledSlider.cpp"/>
+        <FILE id="jiSShk" name="LabeledSlider.h" compile="0" resource="0" file="Source/0-component/LabeledSlider.h"/>
+        <FILE id="k3vodG" name="LFOComponent.cpp" compile="1" resource="0"
+              file="Source/0-component/LFOComponent.cpp"/>
+        <FILE id="PfNmE6" name="LFOComponent.h" compile="0" resource="0" file="Source/0-component/LFOComponent.h"/>
+        <FILE id="gHDzzu" name="MorphParameterManager.cpp" compile="1" resource="0"
+              file="Source/0-component/MorphParameterManager.cpp"/>
+        <FILE id="CXdNi8" name="MorphParameterManager.h" compile="0" resource="0"
+              file="Source/0-component/MorphParameterManager.h"/>
+        <FILE id="OsYpB0" name="MorphParameterRT.cpp" compile="1" resource="0"
+              file="Source/0-component/MorphParameterRT.cpp"/>
+        <FILE id="b6J97V" name="MorphParameterRT.h" compile="0" resource="0"
+              file="Source/0-component/MorphParameterRT.h"/>
+        <FILE id="myZfgl" name="RotatedTextButton.h" compile="0" resource="0"
+              file="Source/0-component/RotatedTextButton.h"/>
+        <FILE id="TqeYMV" name="ShadowComponent.cpp" compile="1" resource="0"
+              file="Source/0-component/ShadowComponent.cpp"/>
+        <FILE id="lgTHoB" name="ShadowComponent.h" compile="0" resource="0"
+              file="Source/0-component/ShadowComponent.h"/>
+        <FILE id="NOzfpj" name="TwoLineToggleButton.h" compile="0" resource="0"
+              file="Source/0-component/TwoLineToggleButton.h"/>
+      </GROUP>
+      <GROUP id="{EA57C463-94D1-A6BA-135F-9F40CA2088B5}" name="1-midiMonitor">
+        <FILE id="B72Xo0" name="InputMonitor.cpp" compile="1" resource="0"
+              file="Source/1-midiMonitor/InputMonitor.cpp"/>
+        <FILE id="Om0XLH" name="InputMonitor.h" compile="0" resource="0" file="Source/1-midiMonitor/InputMonitor.h"/>
+        <FILE id="NR6KqY" name="MidiMonitor.h" compile="0" resource="0" file="Source/1-midiMonitor/MidiMonitor.h"/>
+        <FILE id="uqOGRg" name="OutputMonitor.cpp" compile="1" resource="0"
+              file="Source/1-midiMonitor/OutputMonitor.cpp"/>
+        <FILE id="S3k5xo" name="OutputMonitor.h" compile="0" resource="0" file="Source/1-midiMonitor/OutputMonitor.h"/>
+      </GROUP>
+      <GROUP id="{F3CA8764-FC51-1C21-D62D-CCFCCF680ADD}" name="2-inputFilter">
+        <FILE id="PuL6av" name="InputFilter.cpp" compile="1" resource="0" file="Source/2-inputFilter/InputFilter.cpp"/>
+        <FILE id="JDGJWU" name="InputFilter.h" compile="0" resource="0" file="Source/2-inputFilter/InputFilter.h"/>
+        <FILE id="EpSrHU" name="InputFilterProcessor.cpp" compile="1" resource="0"
+              file="Source/2-inputFilter/InputFilterProcessor.cpp"/>
+        <FILE id="pYeyRg" name="InputFilterProcessor.h" compile="0" resource="0"
+              file="Source/2-inputFilter/InputFilterProcessor.h"/>
+      </GROUP>
+      <GROUP id="{9D14B76E-54CC-BCDB-C200-216EB9E23067}" name="3-harmonizer">
+        <FILE id="knPspF" name="Harmonizer.cpp" compile="1" resource="0" file="Source/3-harmonizer/Harmonizer.cpp"/>
+        <FILE id="qPX4CR" name="Harmonizer.h" compile="0" resource="0" file="Source/3-harmonizer/Harmonizer.h"/>
+        <FILE id="Mb9YVj" name="HarmonizerProcessor.cpp" compile="1" resource="0"
+              file="Source/3-harmonizer/HarmonizerProcessor.cpp"/>
+        <FILE id="VBOVqX" name="HarmonizerProcessor.h" compile="0" resource="0"
+              file="Source/3-harmonizer/HarmonizerProcessor.h"/>
+      </GROUP>
+      <GROUP id="{9E16B6A0-ADBC-97C1-5A92-D2FA46CCD738}" name="4-arpeggiator">
+        <FILE id="r6L0f2" name="ArpeggiatorProcessor.cpp" compile="1" resource="0"
+              file="Source/4-arpeggiator/ArpeggiatorProcessor.cpp"/>
+        <FILE id="wn5U1Q" name="ArpeggiatorProcessor.h" compile="0" resource="0"
+              file="Source/4-arpeggiator/ArpeggiatorProcessor.h"/>
+        <FILE id="bsW9Mb" name="StepToggle.cpp" compile="1" resource="0" file="Source/4-arpeggiator/StepToggle.cpp"/>
+        <FILE id="ExNc6P" name="LinkToggle.cpp" compile="1" resource="0" file="Source/4-arpeggiator/LinkToggle.cpp"/>
+        <FILE id="ojbF9H" name="LinkToggle.h" compile="0" resource="0" file="Source/4-arpeggiator/LinkToggle.h"/>
+        <FILE id="t1vCaN" name="StepSequencerGrid.cpp" compile="1" resource="0"
+              file="Source/4-arpeggiator/StepSequencerGrid.cpp"/>
+        <FILE id="inCPRf" name="StepSequencerGrid.h" compile="0" resource="0"
+              file="Source/4-arpeggiator/StepSequencerGrid.h"/>
+        <FILE id="KuK4Oy" name="StepToggle.h" compile="0" resource="0" file="Source/4-arpeggiator/StepToggle.h"/>
+        <FILE id="GEnc4E" name="Arpeggiator.cpp" compile="1" resource="0" file="Source/4-arpeggiator/Arpeggiator.cpp"/>
+        <FILE id="LWRbip" name="Arpeggiator.h" compile="0" resource="0" file="Source/4-arpeggiator/Arpeggiator.h"/>
+      </GROUP>
+      <GROUP id="{7ACCF96A-F225-F810-B967-295E6FEE9011}" name="5-splitter">
+        <FILE id="FtVXBf" name="SplitLineToggle.cpp" compile="1" resource="0"
+              file="Source/5-splitter/SplitLineToggle.cpp"/>
+        <FILE id="WEzWSQ" name="SplitLineToggle.h" compile="0" resource="0"
+              file="Source/5-splitter/SplitLineToggle.h"/>
+        <FILE id="VzdLry" name="Splitter.cpp" compile="1" resource="0" file="Source/5-splitter/Splitter.cpp"/>
+        <FILE id="PFq2Xp" name="Splitter.h" compile="0" resource="0" file="Source/5-splitter/Splitter.h"/>
+        <FILE id="Kc7358" name="SplitterLineComponent.cpp" compile="1" resource="0"
+              file="Source/5-splitter/SplitterLineComponent.cpp"/>
+        <FILE id="FqJA7e" name="SplitterLineComponent.h" compile="0" resource="0"
+              file="Source/5-splitter/SplitterLineComponent.h"/>
+        <FILE id="Y1O2HC" name="SplitterModeToggle.cpp" compile="1" resource="0"
+              file="Source/5-splitter/SplitterModeToggle.cpp"/>
+        <FILE id="dpqJVT" name="SplitterModeToggle.h" compile="0" resource="0"
+              file="Source/5-splitter/SplitterModeToggle.h"/>
+        <FILE id="T2Qd1U" name="SplitterProcessor.cpp" compile="1" resource="0"
+              file="Source/5-splitter/SplitterProcessor.cpp"/>
+        <FILE id="GEEL7z" name="SplitterProcessor.h" compile="0" resource="0"
+              file="Source/5-splitter/SplitterProcessor.h"/>
+      </GROUP>
+      <GROUP id="{F8519F23-7FE1-9C03-B19D-2A8747B05300}" name="gfx">
+        <FILE id="HUfXND" name="triangle.svg" compile="0" resource="1" file="Source/gfx/triangle.svg"/>
+        <FILE id="MmFBXS" name="square.svg" compile="0" resource="1" file="Source/gfx/square.svg"/>
+        <FILE id="xlI4ig" name="sine.svg" compile="0" resource="1" file="Source/gfx/sine.svg"/>
+        <FILE id="e1VaDb" name="saw.svg" compile="0" resource="1" file="Source/gfx/saw.svg"/>
+        <FILE id="PyLKzF" name="rnd.svg" compile="0" resource="1" file="Source/gfx/rnd.svg"/>
+        <FILE id="da3yYm" name="copy.svg" compile="0" resource="1" file="Source/gfx/copy.svg"/>
+        <FILE id="l3B1aF" name="delete.svg" compile="0" resource="1" file="Source/gfx/delete.svg"/>
+        <FILE id="MonrZr" name="paste.svg" compile="0" resource="1" file="Source/gfx/paste.svg"/>
+        <FILE id="qZRmPF" name="save.svg" compile="0" resource="1" file="Source/gfx/save.svg"/>
+        <FILE id="b1IrRM" name="link.svg" compile="0" resource="1" file="Source/gfx/link.svg"/>
+        <FILE id="gIqRPD" name="mdvz.svg" compile="0" resource="1" file="Source/gfx/mdvz.svg"/>
+        <FILE id="jEPwCR" name="unlink.svg" compile="0" resource="1" file="Source/gfx/unlink.svg"/>
+        <FILE id="uHVux0" name="NotoMusic.ttf" compile="0" resource="1" file="Source/gfx/NotoMusic.ttf"/>
+        <GROUP id="{238BCE31-67F0-E290-3333-EE6C7B9CBA6B}" name="Jost">
+          <FILE id="aO7VKS" name="Jost-Black.ttf" compile="0" resource="1" file="Source/gfx/Jost/Jost-Black.ttf"/>
+          <FILE id="WFAvq3" name="Jost-BlackItalic.ttf" compile="0" resource="1"
+                file="Source/gfx/Jost/Jost-BlackItalic.ttf"/>
+          <FILE id="CER5Sg" name="Jost-Bold.ttf" compile="0" resource="1" file="Source/gfx/Jost/Jost-Bold.ttf"/>
+          <FILE id="wJ7edH" name="Jost-BoldItalic.ttf" compile="0" resource="1"
+                file="Source/gfx/Jost/Jost-BoldItalic.ttf"/>
+          <FILE id="zKJpn5" name="Jost-ExtraBold.ttf" compile="0" resource="1"
+                file="Source/gfx/Jost/Jost-ExtraBold.ttf"/>
+          <FILE id="oONg8Q" name="Jost-ExtraBoldItalic.ttf" compile="0" resource="1"
+                file="Source/gfx/Jost/Jost-ExtraBoldItalic.ttf"/>
+          <FILE id="yG2CEf" name="Jost-ExtraLight.ttf" compile="0" resource="1"
+                file="Source/gfx/Jost/Jost-ExtraLight.ttf"/>
+          <FILE id="rlzKXD" name="Jost-ExtraLightItalic.ttf" compile="0" resource="1"
+                file="Source/gfx/Jost/Jost-ExtraLightItalic.ttf"/>
+          <FILE id="QsdYrt" name="Jost-Italic.ttf" compile="0" resource="1" file="Source/gfx/Jost/Jost-Italic.ttf"/>
+          <FILE id="kQdh4P" name="Jost-Light.ttf" compile="0" resource="1" file="Source/gfx/Jost/Jost-Light.ttf"/>
+          <FILE id="wP6wfG" name="Jost-LightItalic.ttf" compile="0" resource="1"
+                file="Source/gfx/Jost/Jost-LightItalic.ttf"/>
+          <FILE id="LklCBQ" name="Jost-Medium.ttf" compile="0" resource="1" file="Source/gfx/Jost/Jost-Medium.ttf"/>
+          <FILE id="w3CV4V" name="Jost-MediumItalic.ttf" compile="0" resource="1"
+                file="Source/gfx/Jost/Jost-MediumItalic.ttf"/>
+          <FILE id="hYLQsR" name="Jost-Regular.ttf" compile="0" resource="1"
+                file="Source/gfx/Jost/Jost-Regular.ttf"/>
+          <FILE id="d9P6iW" name="Jost-SemiBold.ttf" compile="0" resource="1"
+                file="Source/gfx/Jost/Jost-SemiBold.ttf"/>
+          <FILE id="qa4v6D" name="Jost-SemiBoldItalic.ttf" compile="0" resource="1"
+                file="Source/gfx/Jost/Jost-SemiBoldItalic.ttf"/>
+          <FILE id="DppWLM" name="Jost-Thin.ttf" compile="0" resource="1" file="Source/gfx/Jost/Jost-Thin.ttf"/>
+          <FILE id="hoZdbN" name="Jost-ThinItalic.ttf" compile="0" resource="1"
+                file="Source/gfx/Jost/Jost-ThinItalic.ttf"/>
+        </GROUP>
+      </GROUP>
+      <FILE id="IC33iR" name="BuildTimestamp.h" compile="0" resource="0"
+            file="Source/BuildTimestamp.h"/>
+      <FILE id="CDetCp" name="ChordDetection.cpp" compile="1" resource="0"
+            file="Source/ChordDetection.cpp"/>
+      <FILE id="CDetHd" name="ChordDetection.h" compile="0" resource="0"
+            file="Source/ChordDetection.h"/>
+      <FILE id="VKmqlw" name="DebugConfig.cpp" compile="1" resource="0" file="Source/DebugConfig.cpp"/>
+      <FILE id="j7wYt3" name="DebugConfig.h" compile="0" resource="0" file="Source/DebugConfig.h"/>
+      <FILE id="zUc9J4" name="LFOGroup.cpp" compile="1" resource="0" file="Source/LFOGroup.cpp"/>
+      <FILE id="nUYaGH" name="LFOGroup.h" compile="0" resource="0" file="Source/LFOGroup.h"/>
+      <FILE id="j0CZxh" name="MainBar.cpp" compile="1" resource="0" file="Source/MainBar.cpp"/>
+      <FILE id="kte7Zi" name="MainBar.h" compile="0" resource="0" file="Source/MainBar.h"/>
+      <FILE id="ve55b5" name="MainMenu.cpp" compile="1" resource="0" file="Source/MainMenu.cpp"/>
+      <FILE id="x2kChA" name="MainMenu.h" compile="0" resource="0" file="Source/MainMenu.h"/>
       <FILE id="ZZArcg" name="PluginColours.h" compile="0" resource="0" file="Source/PluginColours.h"/>
       <FILE id="uQVfwn" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
@@ -80,33 +177,22 @@
             file="Source/PluginLookAndFeel.cpp"/>
       <FILE id="OZVri3" name="PluginLookAndFeel.h" compile="0" resource="0"
             file="Source/PluginLookAndFeel.h"/>
+      <FILE id="X0aDgi" name="UiMetrics.h" compile="0" resource="0" file="Source/UiMetrics.h"/>
+      <FILE id="zzsQFV" name="PluginParameters.cpp" compile="1" resource="0"
+            file="Source/PluginParameters.cpp"/>
       <FILE id="NWk4KE" name="PluginParameters.h" compile="1" resource="0"
             file="Source/PluginParameters.h"/>
       <FILE id="SIKhse" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="KN9HuQ" name="PluginProcessor.h" compile="0" resource="0"
             file="Source/PluginProcessor.h"/>
-      <FILE id="BIarTd" name="TransformBase.cpp" compile="1" resource="0"
-            file="Source/TransformBase.cpp"/>
-      <FILE id="CY1cTK" name="TransformBase.h" compile="0" resource="0" file="Source/TransformBase.h"/>
-      <FILE id="MXp6AH" name="TransformOctaveRandomizer.cpp" compile="1"
-            resource="0" file="Source/TransformOctaveRandomizer.cpp"/>
-      <FILE id="rhv1o8" name="TransformOctaveRandomizer.h" compile="0" resource="0"
-            file="Source/TransformOctaveRandomizer.h"/>
-      <FILE id="mQ8bOh" name="TransformStrummer.cpp" compile="1" resource="0"
-            file="Source/TransformStrummer.cpp"/>
-      <FILE id="OvDiUY" name="TransformStrummer.h" compile="0" resource="0"
-            file="Source/TransformStrummer.h"/>
-      <FILE id="P35S0M" name="TransformTranspose.cpp" compile="1" resource="0"
-            file="Source/TransformTranspose.cpp"/>
-      <FILE id="yL1v0r" name="TransformTranspose.h" compile="0" resource="0"
-            file="Source/TransformTranspose.h"/>
-      <FILE id="M3SlZf" name="TransformVelocityFormer.h" compile="0" resource="0"
-            file="Source/TransformVelocityFormer.h"/>
-      <FILE id="soMbvV" name="TransformVelocityFromer.cpp" compile="1" resource="0"
-            file="Source/TransformVelocityFromer.cpp"/>
-      <FILE id="wpPDfb" name="TwoLineToggleButton.h" compile="0" resource="0"
-            file="Source/TwoLineToggleButton.h"/>
+      <FILE id="qa3h7T" name="PresetManager.cpp" compile="1" resource="0"
+            file="Source/PresetManager.cpp"/>
+      <FILE id="x1ceVl" name="PresetManager.h" compile="0" resource="0" file="Source/PresetManager.h"/>
+      <FILE id="tgNmmD" name="TransportState.cpp" compile="1" resource="0"
+            file="Source/TransportState.cpp"/>
+      <FILE id="SM99DY" name="TransportState.h" compile="0" resource="0"
+            file="Source/TransportState.h"/>
     </GROUP>
   </MAINGROUP>
   <MODULES>
@@ -116,6 +202,8 @@
     <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="1"
             useGlobalPath="1"/>
     <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors_headless" showAllCode="1" useLocalCopy="1"
+            useGlobalPath="1"/>
     <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
     <MODULE id="juce_core" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
     <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="1" useGlobalPath="1"/>
@@ -126,9 +214,11 @@
   </MODULES>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
   <EXPORTFORMATS>
-    <XCODE_MAC targetFolder="Builds/MacOSX">
+    <XCODE_MAC targetFolder="/Volumes/LORULE/DEV/Projets/MDVZ/MidivisiVici_Builds"
+               keepCustomXcodeSchemes="1">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" targetName="MidivisiVici"/>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="MidivisiVici" auBinaryLocation="$(HOME)/Library/Audio/Plug-Ins/Components"
+                       vst3BinaryLocation="$(HOME)/Library/Audio/Plug-Ins/VST3" enablePluginBinaryCopyStep="1"/>
         <CONFIGURATION isDebug="0" name="Release" targetName="MidivisiVici"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
@@ -144,6 +234,7 @@
         <MODULEPATH id="juce_audio_devices" path="../JUCE/modules"/>
         <MODULEPATH id="juce_audio_formats" path="../JUCE/modules"/>
         <MODULEPATH id="juce_audio_utils" path="../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors_headless" path="../../../../../../Applications/JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
   </EXPORTFORMATS>
